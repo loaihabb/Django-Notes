@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% if LANGUAGE_CODE == 'ar' %}
+<h2 class="font-bold text-xl mb-2">{{ flower.title_ar }}</h2>
+<p class="text-gray-700 text-base h-16 overflow-hidden">{{ flower.description_ar }}</p>
+{% else %}
+<h2 class="font-bold text-xl mb-2">{{ flower.title }}</h2>
+<p class="text-gray-700 text-base h-16 overflow-hidden">{{ flower.description }}</p>
+{% endif %}
+
+
+<!-- To Translate This -->
+<p> More </p>
+
+<!-- Use This -->
+{% trans "More" %}
+
+<!--
+Then In Settings.py Add LOCALE_PATH = [os.path.join(BASE_DIR, "locale")]
+Then Use The Commands : 
+python manage.py makemessages -l ar 
+python manage.py compilemessages -l ar 
+-->
