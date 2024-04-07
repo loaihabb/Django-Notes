@@ -1,0 +1,24 @@
+
+<!-- * This is the normal create form -->
+<div class="container mx-auto flex flex-wrap justify-center">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<!--
+Todo : 5- Add  {{formset.management_form}}
+Todo : 6- Change {{form}} with {{formset}}
+* This is Create and Update view in one page: All the existing Objects with one new empty Object to create or update
+-->
+
+<div class="container mx-auto flex flex-wrap justify-center">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{formset.management_form}}
+        {{formset}}
+        <input type="submit" value="Submit">
+    </form>
+</div>
