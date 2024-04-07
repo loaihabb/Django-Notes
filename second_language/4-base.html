@@ -1,5 +1,5 @@
 {% load i18n %}
-
+<!-- Todo: If there's more than two languages -->
 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}">
     <select name="language">
@@ -15,7 +15,7 @@
     <input type="submit" value="Go">
 </form>
 
-<!--We Can Use This If There's Just Two languages -->
+<!-- Todo : We Can Use This If There's Just Two languages -->
 
 <form action="{% url 'set_language' %}" method="post">
     {% csrf_token %}
